@@ -269,6 +269,7 @@ var SocialSharing = {
      * @param string url Url to share.
      */
     openSharer: function openSharer (network, url) {
+      this.$root.$emit('social_shares_open', network, this.url);
       var this$1 = this;
 
       // If a popup window already exist it will be replaced, trigger a close event.
