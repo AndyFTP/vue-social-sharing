@@ -190,7 +190,8 @@ export default {
      *
      * @param string url Url to share.
      */
-    openSharer (network, url) {
+    openSharer (network, url) { 
+      this.$root.$emit('social_shares_open', network, this.url);
       // If a popup window already exist it will be replaced, trigger a close event.
       if (this.popup.window && this.popup.interval) {
         clearInterval(this.popup.interval);
